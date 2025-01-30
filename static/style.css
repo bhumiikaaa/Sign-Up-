@@ -1,0 +1,131 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #1f2a44, #3b4a76);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the form */
+.form-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Heading */
+h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px; /* Added space below the heading */
+}
+
+/* Form input groups */
+.input-group {
+    margin-bottom: 20px; /* Space between each input field */
+    position: relative;
+}
+
+/* Add spacing between the heading and the input fields */
+.input-group:first-of-type {
+    margin-top: 20px; /* Adds space between heading and the first input */
+}
+
+.input-group label {
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0 5px;
+}
+
+/* Styling the input fields */
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #222;
+    color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect on inputs */
+.input-group input:focus {
+    border-color: #4e9ff7;
+    outline: none;
+}
+
+/* Submit button */
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #4e9ff7;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px; /* Margin between button and input fields */
+}
+
+.submit-btn:hover {
+    background-color: #1e74d6;
+    transform: translateY(-3px);
+}
+
+.submit-btn:active {
+    background-color: #1e4fa0;
+    transform: translateY(1px);
+}
+
+/* Smooth animations for inputs */
+.input-group input,
+.submit-btn {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.input-group input:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.input-group input:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.input-group input:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.submit-btn {
+    animation-delay: 0.7s;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
